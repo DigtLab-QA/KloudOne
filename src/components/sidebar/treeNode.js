@@ -18,9 +18,11 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   if (typeof document != 'undefined') {
     location = document.location;
   }
-  const active =
-    location && (location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
+  const active = 
+    location && (location.pathname === url + '/' || location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
 
+  const actived = location.pathname.includes(url + '/') === true && hasChildren ;
+  
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
 
   return (
@@ -29,14 +31,14 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
         <Link to={url}>
           {title}
           {!config.sidebar.frontLine && title && hasChildren ? (
-            <button onClick={collapse} aria-label="collapse" className="collapser">
-              {!isCollapsed ? <OpenedSvg /> : <ClosedSvg />}
+            <button onClick={collapse} aria-label="collapse" className="collapser" > 
+              {!isCollapsed || actived? <OpenedSvg /> : <ClosedSvg />}
             </button>
           ) : null}
         </Link>
       )}
 
-      {!isCollapsed && hasChildren ? (
+      {(!isCollapsed && hasChildren) || (actived && isCollapsed) ? (
         <ul>
           {items.map((item, index) => (
             <TreeNode
@@ -48,6 +50,8 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
           ))}
         </ul>
       ) : null}
+
+
     </li>
   );
 };
