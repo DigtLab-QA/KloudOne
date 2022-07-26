@@ -11,16 +11,35 @@ export const baseStyles = css`
   }
   ::-webkit-input-placeholder {
     /* Edge */
-    color: #c2c2c2;
+    color: #000;
   }
+
+  .css-1vvj7tk-Sidebar::-webkit-scrollbar {
+    width: 8px; 
+}   
+
+  .css-1vvj7tk-Sidebar::-webkit-scrollbar-track {
+    background: #fff !important;
+    border-radius: 8px; 
+}        
+
+  .css-1vvj7tk-Sidebar::-webkit-scrollbar-track {
+    background: #2186f0; 
+    border-radius: 8px; 
+  }
+
+  .css-1vvj7tk-Sidebar ::-webkit-scrollbar-thumb {
+    background: rgba(33,134,240,.12) !important;
+    border-radius: 8px;
+}
 
   :-ms-input-placeholder {
     /* Internet Explorer */
-    color: #c2c2c2;
+    color: #000;
   }
 
   ::placeholder {
-    color: #c2c2c2;
+    color: #000;
   }
   html,
   body {
@@ -146,6 +165,7 @@ export const baseStyles = css`
   .formElement {
     background-color: transparent;
     padding: 4px;
+    padding-left:0;
     border-radius: 5px;
     position: relative;
   }
@@ -154,16 +174,16 @@ export const baseStyles = css`
     border: none;
   }
   .formElement svg path {
-    fill: #2fd2c5;
+    fill: #2186f0;
   }
   .searchInput {
     width: 100%;
-    background-color: rgba(28,211,198,.12) !important;
+    background-color: rgba(33, 134, 240,.12) !important;
     border-width: 0 !important;
     color: #C2C2C2;
     padding: 10px;
     border-radius: 5px;
-    color: #fff;
+    color: #000;
     opacity: .6;
     padding-left: 38px;
     max-width: 600px;
@@ -183,6 +203,9 @@ export const baseStyles = css`
   }
   .searchWrapper a {
     font-weight: 500;
+  }
+  .header-result-search{
+    margin-bottom:10px
   }
   .hitWrapper {
     background-color: #fff;
@@ -257,7 +280,7 @@ export const baseStyles = css`
     padding: 0 !important;
   }
   .navBarDefault {
-    background-color: #001934;
+    background-color: #fff;
     border-radius: 0;
     border-top: 0;
     margin-bottom: 0;
@@ -274,7 +297,7 @@ export const baseStyles = css`
     height: 80px;
   }
   .navBarHeader {
-    min-width: 335px;
+    min-width: 398px;
     padding-right: 20px;
     display: flex;
     align-items: center;
@@ -286,7 +309,7 @@ export const baseStyles = css`
   }
 
   .navBarBrand img {
-    width: 120px;
+    width: 180px;
     margin-right: 6px;
     display: inline-block;
   }
@@ -303,7 +326,7 @@ export const baseStyles = css`
     font-weight: 500;
     line-height: 1em;
     opacity: 1;
-    padding: 10px 15px;
+    padding: 0;
   }
   .navBarNav {
     display: flex;
@@ -450,7 +473,7 @@ export const baseStyles = css`
   }
 
   .hideFrontLine .active > a {
-    background-color: #1ed3c6;
+    background-color: #2186f0;
     color: #fff !important;
   }
   .firstLevel ul li .collapser svg path {
@@ -470,7 +493,7 @@ export const baseStyles = css`
   }
 
   .sideBarUL .item > a {
-    color: #1ED3C6;
+    color: #2186f0;
     text-decoration: none;
     display: flex;
     align-items: center;
@@ -508,7 +531,7 @@ export const baseStyles = css`
     border-color: rgb(230, 236, 241) !important;
     border-style: solid none solid solid;
     border-width: 1px 0px 1px 1px;
-    background-color: #1ed3c6 !important;
+    background-color: #2186f0 !important;
     color: #fff;
   }
 
