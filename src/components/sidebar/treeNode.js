@@ -13,7 +13,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
 
   const hasChildren = items.length !== 0;
 
-  let location;
+  let location = '';
 
   if (typeof document != 'undefined') {
     location = document.location;
@@ -21,7 +21,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
   const active = 
     location && (location.pathname === url + '/' || location.pathname === url || location.pathname === config.gatsby.pathPrefix + url);
 
-  const actived = location.pathname.includes(url + '/') === true && hasChildren ;
+  const actived = location.pathname.includes(url + '/') === true && hasChildren;
   
   const calculatedClassName = `${className} item ${active ? 'active' : ''}`;
 
@@ -32,7 +32,7 @@ const TreeNode = ({ className = '', setCollapsed, collapsed, url, title, items, 
           {title}
           {!config.sidebar.frontLine && title && hasChildren ? (
             <button onClick={collapse} aria-label="collapse" className="collapser" > 
-              {!isCollapsed || actived? <OpenedSvg /> : <ClosedSvg />}
+              {!isCollapsed || actived ? <OpenedSvg /> : <ClosedSvg />}
             </button>
           ) : null}
         </Link>
