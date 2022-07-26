@@ -14,21 +14,21 @@ export const baseStyles = css`
     color: #000;
   }
 
-  .css-1vvj7tk-Sidebar::-webkit-scrollbar {
+  .css-8uxxw2::-webkit-scrollbar {
     width: 8px; 
 }   
 
-  .css-1vvj7tk-Sidebar::-webkit-scrollbar-track {
+  .css-8uxxw2::-webkit-scrollbar-track {
     background: #fff !important;
     border-radius: 8px; 
 }        
 
-  .css-1vvj7tk-Sidebar::-webkit-scrollbar-track {
+  .css-8uxxw2::-webkit-scrollbar-track {
     background: #2186f0; 
     border-radius: 8px; 
   }
 
-  .css-1vvj7tk-Sidebar ::-webkit-scrollbar-thumb {
+  .css-8uxxw2 ::-webkit-scrollbar-thumb {
     background: rgba(33,134,240,.12) !important;
     border-radius: 8px;
 }
@@ -36,6 +36,10 @@ export const baseStyles = css`
   :-ms-input-placeholder {
     /* Internet Explorer */
     color: #000;
+  }
+
+  .css-10m2n0t a:hover {
+    color: #2186f0 !important;
   }
 
   ::placeholder {
