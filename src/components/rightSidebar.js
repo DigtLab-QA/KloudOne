@@ -59,7 +59,7 @@ const SidebarLayout = ({ location }) => (
       return (
           <Sidebar>
             <ul className={'rightSideBarUL'}>
-              <li className={'rightSideTitle'}>CONTENTS</li>
+              <li className={'rightSideTitle'}>Содержание</li>
               {finalNavItems}
             </ul>
           </Sidebar>
