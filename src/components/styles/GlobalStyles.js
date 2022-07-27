@@ -79,6 +79,11 @@ export const baseStyles = css`
   a:hover {
     text-decoration: none;
   }
+  
+  .css-utzlxm .switch{
+    display:none;
+  }
+  
   .displayInline {
     display: inline-block;
   }
