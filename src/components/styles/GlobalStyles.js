@@ -14,21 +14,21 @@ export const baseStyles = css`
     color: #000;
   }
 
-  .css-8uxxw2::-webkit-scrollbar {
+  aside::-webkit-scrollbar {
     width: 8px; 
 }   
 
-  .css-8uxxw2::-webkit-scrollbar-track {
+ aside::-webkit-scrollbar-track {
     background: #fff !important;
     border-radius: 8px; 
 }        
 
-  .css-8uxxw2::-webkit-scrollbar-track {
+  aside::-webkit-scrollbar-track {
     background: #2186f0; 
     border-radius: 8px; 
   }
 
-  .css-8uxxw2 ::-webkit-scrollbar-thumb {
+  aside::-webkit-scrollbar-thumb {
     background: rgba(33,134,240,.12) !important;
     border-radius: 8px;
 }
