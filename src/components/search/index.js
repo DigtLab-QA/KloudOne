@@ -24,17 +24,17 @@ const SearchIcon = styled(Search)`
 
 const HitsWrapper = styled.div`
   display: ${props => (props.show ? `grid` : `none`)};
-  max-height: 80vh;
-  overflow: scroll;
+  max-height: 120vh;
+  overflow: hidden;
   z-index: 2;
   -webkit-overflow-scrolling: touch;
   position: absolute;
   right: 0;
   top: calc(100% + 0.5em);
-  width: 80vw;
-  max-width: 30em;
+  width: 600px;
+  max-width: 600px;
   box-shadow: 0 0 5px 0;
-  padding: 0.7em 1em 0.4em;
+  padding: 0.7em 1em 0.7em;
   background: white;
   @media only screen and (max-width: 991px) {
     width: 400px;
@@ -150,7 +150,7 @@ export default function SearchComponent({ indices, collapse, hitsAsGrid }) {
             </Index>
           );
         })}
-        <PoweredBy />
+       
       </HitsWrapper>
       <Configure hitsPerPage={5} />
     </InstantSearch>
