@@ -28,7 +28,7 @@ const config = {
 		  </li>`,
     links: [{ text: '', link: '' }],
     search: {
-      enabled: false,
+      enabled: true,
       indexName: 'Kloud',
       algoliaAppId: "ALEC0WYN85",
       algoliaSearchKey: "5b3e9e822ca6424f23ac7eabae6576e9",
